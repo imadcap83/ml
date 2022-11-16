@@ -1,7 +1,6 @@
 pycaret
 streamlit
 pandas
-os
 seaborn
 matplotlib
 image
