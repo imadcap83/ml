@@ -1,9 +1,8 @@
 streamlit
 pandas
 pandas_profiling
-st_profile_report
 os
 pycaret
 seaborn
 matplotlib
-Image
+image
