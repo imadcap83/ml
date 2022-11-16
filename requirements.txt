@@ -4,4 +4,4 @@ pandas
 seaborn
 matplotlib
 image
-st_profile_report
+streamlit-profiler
