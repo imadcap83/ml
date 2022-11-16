@@ -1,8 +1,7 @@
+pycaret
 streamlit
 pandas
-pandas_profiling
 os
-pycaret
 seaborn
 matplotlib
 image
