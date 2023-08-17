@@ -9,6 +9,7 @@ pycaret
 #matplotlib
 Image
 lime
+mlflow
 
 # Base
 ipython>=5.5.0
