@@ -315,10 +315,10 @@ if reg == "ANOVA (ANalysis Of VAriance)":
 
             anova_df = pd.read_csv('pred.csv')
             quantitative = [f for f in anova_df.columns if anova_df.dtypes[f] != 'object']
-            quantitative.remove('Label')
+            quantitative.remove('prediction_label')
 
             qualitative = [f for f in anova_df.columns if anova_df.dtypes[f] != 'object']
-            qualitative.remove('Label')
+            qualitative.remove('prediction_label')
 
             def anova(frame):
                 anv = pd.DataFrame()
@@ -327,7 +327,7 @@ if reg == "ANOVA (ANalysis Of VAriance)":
                 for c in qualitative:
                     samples = []
                     for cls in frame[c].unique():
-                        s = frame[frame[c] == cls]['Label'].values
+                        s = frame[frame[c] == cls]['prediction_label'].values
                         samples.append(s)
                     pval = stats.f_oneway(*samples)[1]  # P-value 값
                     pvals.append(pval)
@@ -352,10 +352,10 @@ if reg == "ANOVA (ANalysis Of VAriance)":
                 ts.plot(ax=ax)
                 plt.xticks(rotation=90)
 
-            f = pd.melt(anova_df, id_vars=['Label'], value_vars=quantitative)
+            f = pd.melt(anova_df, id_vars=['prediction_label'], value_vars=quantitative)
             fig_1 = plt.figure(figsize=(10, 4))
             g = sns.FacetGrid(f, col="variable", col_wrap=2, sharex=False, sharey=False)
-            g1 = g.map(pairplot, "value", "Label")
+            g1 = g.map(pairplot, "value", "prediction_label")
             g1.savefig('anova_each.png')
 
             image_g1 = Image.open('anova_each.png')
