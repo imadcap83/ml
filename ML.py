@@ -199,7 +199,7 @@ if reg == "Train&Analyze Model":
 
 
     if st.button('Click Me'):
-        setup(df, target=target, silent=True, log_experiment = True, train_size=size, normalize = normalization, transformation = transformation)
+        setup(df, target=target, log_experiment = True, train_size=size, normalize = normalization, transformation = transformation)
 
         setup_df = pull()
 
@@ -380,7 +380,7 @@ if cfc == "Train&Analyze Model":
     target = st.selectbox("Select Target(Response Y)",df.columns)
 
     if st.button('Click Me'):
-        setup(df, target=target, silent=True, log_experiment = True)
+        setup(df, target=target, log_experiment = True)
         setup_df = pull()
 
         st.info("Setup Succesfully Completed")
