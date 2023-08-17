@@ -1,7 +1,7 @@
 streamlit==1.21.0
 #pandas
 #pandas_profiling
-#st_profile_report
+st_profile_report
 #os
 pycaret
 #seaborn
