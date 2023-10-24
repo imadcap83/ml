@@ -15,6 +15,7 @@ import datetime
 from pathlib import Path
 import os
 import warnings
+import ydata_profiling
 
 #from pycaret.regression import setup, compare_model, pull, save_model
 
