@@ -10,7 +10,7 @@ import joblib
 import streamlit.components.v1 as components
 import scipy.stats as stats
 import pandas as pd
-import pandas_profiling
+#import pandas_profiling
 import datetime
 from pathlib import Path
 import os
