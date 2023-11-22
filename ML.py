@@ -276,8 +276,8 @@ if reg == "Prediction&Explaining":
         if option == 'Regression':
 
             pred_data = pd.read_csv('pred.csv')
-            X_train = pred_data.drop('prediction_label', axis=1)
-            y_train = pred_data['prediction_label']
+            X_train = pred_data.drop('Label', axis=1)
+            y_train = pred_data['Label']
             y_test = X_train
             X_test = y_train
 
@@ -285,7 +285,7 @@ if reg == "Prediction&Explaining":
 
             explainer = lime.lime_tabular.LimeTabularExplainer(X_train.values,
                                                                feature_names=X_train.columns.values.tolist(),
-                                                               class_names=['prediction_label'], verbose=True,
+                                                               class_names=['Label'], verbose=True,
                                                                mode='regression')
 
             model = f_model.fit(X_train, y_train)
